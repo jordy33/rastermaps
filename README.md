@@ -16,6 +16,23 @@ sudo apt-get install imagemagick
 sudo apt-get install git
 ```
 
+* Authorize pdf
+
+```
+sudo vim  /etc/ImageMagick-6/policy.xml
+```
+
+* Substitute
+```
+<policy domain="coder" rights="none" pattern="PDF" />
+```
+### With
+```
+<policy domain="coder" rights="read|write" pattern="PDF" />
+```
+
+* Reboot
+
 * Check out the project
 
 ```
